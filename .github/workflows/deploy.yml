@@ -38,7 +38,7 @@ jobs:
             **/node_modules/**
             **/README.md
             **/.env*
-            **/package-lock.json 
+            **/package-lock.json  
             **/yarn.lock
             **/.github/**
             **/src/**
