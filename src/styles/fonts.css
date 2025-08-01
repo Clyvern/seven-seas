@@ -1,0 +1,65 @@
+/* Font definitions for Seven Seas website */
+
+/* Cabin Font Family */
+@font-face {
+  font-family: 'Cabin';
+  src: url('../assets/fonts/Cabin-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../assets/fonts/Cabin-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../assets/fonts/Cabin-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../assets/fonts/Cabin-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Salmond Font Family */
+@font-face {
+  font-family: 'Salmond';
+  src: url('../assets/fonts/Salmond - News_2.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Salmond';
+  src: url('../assets/fonts/Salmond - Medium_2.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply fonts to elements */
+:root {
+  --font-primary: 'Cabin', sans-serif;
+  --font-secondary: 'Salmond', serif;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+}

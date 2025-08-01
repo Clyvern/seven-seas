@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+/* Main footer styles */
+.footer {
+  background-color: #2A524E;
+  /* Dark green/teal from the image */
+  color: #FFFFFF;
+  padding: 2rem 2.5rem;
+  /* Vertical and horizontal padding */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* Flexbox container for layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  /* Constrains width on very large screens */
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* Allows items to wrap on smaller screens */
+  gap: 1.5rem;
+  /* Gap between logo and info when they wrap */
+}
+
+/* --- Logo Styling --- */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Space between graphic and text */
+}
+
+.logo-graphic {
+  height: 60px;
+  /* Adjust size as needed */
+  width: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  /* Bold text for the logo */
+  font-size: 1.75rem;
+  line-height: 1;
+  /* Tighter line spacing */
+  text-transform: uppercase;
+}
+
+/* --- Contact Info Styling --- */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Aligns rows to the left */
+  gap: 0.75rem;
+  /* Space between the two rows of info */
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow info items to wrap if needed */
+  gap: 2.5rem;
+  /* Space between items in the same row */
+  font-size: 1rem;
+}
+
+.footer-info a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer-info a:hover {
+  opacity: 0.8;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+  .footer-container {
+    /* Stack logo and info vertically and center them */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info {
+    /* Center the contact info block */
+    align-items: center;
+  }
+
+  .info-row {
+    /* Stack items within each row vertically and center them */
+    flex-direction: column;
+    gap: 0.75rem;
+    /* Reduce gap for vertical stacking */
+    align-items: center;
+  }
+}

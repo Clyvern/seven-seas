@@ -1,0 +1,40 @@
+.language-switcher {
+  margin-left: 1rem;
+}
+
+.language-toggle-btn {
+  background-color: transparent;
+  color: #F04927;
+  border: 1px solid #f04927;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-toggle-btn:hover {
+  color: green;
+  border-color: green;
+}
+
+/* RTL specific styles */
+.rtl .language-switcher {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .language-switcher {
+    margin: 1rem 0 0;
+  }
+
+  .rtl .language-switcher {
+    margin: 1rem 0 0;
+  }
+}

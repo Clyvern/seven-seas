@@ -1,0 +1,356 @@
+/* Contact Page - Main Styles */
+:root {
+  --primary-color: #f04927;
+  /* Orange/coral color */
+  --secondary-color: #144F47;
+  /* Dark teal color */
+  --background-color: #e6dfd5;
+  /* Light beige background */
+  --divider-color: #cce5e1;
+  /* Light teal color for divider */
+  --text-light: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --transition-standard: 0.3s ease;
+}
+
+/* Layout */
+.contactPage {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 2rem 0 4rem;
+}
+
+.contactContainer {
+  max-width: 100%;
+  margin: 0 500px;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* Section Spacing */
+.contactHeader,
+.contactIntro,
+.contactFormSection,
+.contactSocial {
+  margin-bottom: 2rem;
+}
+
+/* Typography */
+.contactTitle {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.contactSubtitle {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+}
+
+.socialTitle {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Divider */
+.contactDivider {
+  width: 400px;
+  height: 1px;
+  background-color: var(--divider-color);
+  margin: 0 auto 2rem;
+}
+
+/* Form Styles */
+.contactForm {
+  text-align: left;
+}
+
+:global([dir="rtl"]) .contactForm {
+  text-align: right;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.formGroup label {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-right: 1rem;
+  width: 80px;
+  text-align: right;
+}
+
+/* RTL Support */
+:global([dir="rtl"]) .formGroup label {
+  margin-right: 0;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.formInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--text-light);
+  color: var(--primary-color);
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+textarea.formInput {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Social Media Section */
+.socialSection {
+  margin-top: 0;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: transform var(--transition-standard), background-color var(--transition-standard);
+}
+
+.socialIcon:hover {
+  transform: translateY(-3px);
+  background-color: #e64a2e;
+  /* Darker orange on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+  .contactContainer {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: 2.8rem;
+  }
+
+  .contactDivider {
+    width: 300px;
+  }
+
+  .contactSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formGroup label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .formInput {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactTitle {
+    font-size: 2.2rem;
+  }
+
+  .contactDivider {
+    width: 250px;
+  }
+
+  .contactSubtitle {
+    font-size: 1.3rem;
+  }
+
+  .socialTitle {
+    font-size: 1.5rem;
+  }
+}
+
+
+.contactForm {
+  background-color: var(--background-color);
+  /* Accurate cream background */
+  padding: 6rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* Centered container for all content */
+.contactForm__container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* "CONTACT US" title */
+.contactForm__title {
+  color: #f04927;
+  /* Accurate terracotta/orange */
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+/* The teal rule under the title */
+.contactForm__rule {
+  border: none;
+  height: 3px;
+  width: 100%;
+  background-color: #9DC8C8;
+  /* Accurate light teal */
+  margin: 1rem auto 1.5rem;
+}
+
+/* "Let's connect..." subtitle */
+.contactForm__subtitle {
+  color: #144F47;
+  /* Accurate dark green/teal */
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 auto 3rem;
+}
+
+/* The <form> element itself */
+.contactForm__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  /* The vertical space between inputs */
+  margin-bottom: 3.5rem;
+}
+
+/* This is the white, rounded container for each label/input pair */
+.contactForm__formGroup {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 1rem 1.5rem;
+  /* Internal spacing */
+  display: flex;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Style for the labels (Name:, Email:, etc.) */
+.contactForm__formGroup label {
+  color: #144F47;
+  /* Dark text color */
+  font-weight: 600;
+  /* Semi-bold for prominence */
+  font-size: 1rem;
+  margin-right: 1rem;
+  /* Space between label and the value */
+  white-space: nowrap;
+  /* Prevents the label from breaking into two lines */
+}
+
+/* CRITICAL PART: Style for the <input> fields to make them seamless */
+.contactForm__formGroup input {
+  border: none;
+  /* No border */
+  outline: none;
+  /* No outline on focus */
+  background-color: transparent;
+  /* No background */
+  width: 100%;
+  /* Take up all available space */
+  color: #f04927;
+  /* Slightly lighter text for the value */
+  font-family: 'Montserrat', sans-serif;
+  /* Ensure font consistency */
+  font-size: 1rem;
+  font-weight: 400;
+  /* Regular weight */
+}
+
+/* "Stay in the loop." section */
+.contactForm__socialSection {
+  margin-bottom: 2.5rem;
+}
+
+.contactForm__socialTitle {
+  color: #144F47;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.contactForm__socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.contactForm__socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #f04927;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.contactForm__socialIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Submit button, styled to match the theme */
+.contactForm__submitBtn {
+  background-color: #f04927;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contactForm__submitBtn:hover {
+  background-color: #f04927;
+  transform: scale(1.05);
+}

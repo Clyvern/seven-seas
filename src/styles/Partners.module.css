@@ -1,0 +1,204 @@
+/* Partners Page - Main Styles */
+:root {
+  --primary-color: #f04927;
+  /* Orange/coral color */
+  --secondary-color: #144F47;
+  /* Dark teal color */
+  --background-color: #e6dfd5;
+  /* Light beige background */
+  --text-light: #ffffff;
+  --logo-opacity: 0.5;
+  --logo-hover-opacity: 0.8;
+  --transition-standard: 0.3s ease;
+
+  /* Spacing */
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+
+  /* Container widths */
+  --container-width: 1200px;
+  --content-width: 900px;
+  --grid-width: 1000px;
+}
+
+/* Layout */
+.partnersPage {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: var(--spacing-lg) 0;
+}
+
+.partnersContainer {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* Section Spacing */
+.partnersHeader,
+.partnersIntro,
+.partnersNetwork,
+.partnersLogos,
+.partnersCta {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Typography */
+.partnersTitle {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: var(--container-width);
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.partners-description {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  max-width: var(--content-width);
+  margin: 0 auto var(--spacing-md);
+  text-align: center;
+}
+
+/* RTL Support */
+:global([dir="rtl"]) .partners-description {
+  direction: rtl;
+  text-align: center;
+}
+
+.global-network-title {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin: var(--spacing-lg) auto;
+}
+
+:global([dir="rtl"]) .global-network-title {
+  direction: rtl;
+}
+
+/* Partner Logo Grid */
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  max-width: var(--grid-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partnersGrid.secondRow {
+  margin-bottom: var(--spacing-lg);
+}
+
+.partnerLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partnerLogo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  opacity: var(--logo-opacity);
+  transition: opacity var(--transition-standard);
+}
+
+.partnerLogo:hover img {
+  opacity: var(--logo-hover-opacity);
+}
+
+/* CTA Button */
+.getInTouchContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.getInTouchBtn {
+  background-color: #f04927;
+  color: var(--text-light);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-standard);
+}
+
+.getInTouchBtn:hover {
+  background-color: var(--primary-color);
+  /* Darker orange on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .partnersGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .partnersTitle {
+    font-size: 3rem;
+  }
+
+  :root {
+    --spacing-lg: 2.5rem;
+    --spacing-md: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnersGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .partnersTitle {
+    font-size: 2.5rem;
+  }
+
+  .partnersDescription {
+    font-size: 1rem;
+  }
+
+  :root {
+    --spacing-lg: 2rem;
+    --spacing-md: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .partnersGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .partnersTitle {
+    font-size: 2rem;
+  }
+
+  .globalNetworkTitle {
+    font-size: 1.5rem;
+  }
+
+  :root {
+    --spacing-lg: 1.75rem;
+    --spacing-md: 1rem;
+  }
+}
+
+.globalNetworkTitle {
+  font-size: 1.5rem;
+  color: #f04927;
+}

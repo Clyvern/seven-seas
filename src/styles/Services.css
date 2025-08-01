@@ -1,0 +1,799 @@
+.services-page {
+  min-height: 100vh;
+}
+
+/* Services Header Section */
+.services-header {
+  background-color: #e6dfd5;
+  /* Light beige background */
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.services-title-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services-title {
+  font-size: 3.5rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Import Export Section */
+.import-export-section {
+  background-color: #e6dfd5;
+  /* Light beige background */
+  padding: 0 0 4rem 0;
+}
+
+.import-export-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.import-export-image {
+  width: 50%;
+  background-color: #144F47;
+  /* Dark teal background */
+  position: relative;
+  overflow: hidden;
+}
+
+.import-export-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.8;
+  /* Slightly transparent to match design */
+}
+
+.import-export-content {
+  width: 50%;
+  padding: 3rem 2rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[dir="rtl"] .import-export-content {
+  padding: 3rem 3rem 3rem 2rem;
+}
+
+.import-export-title {
+  font-size: 2rem;
+  color: #144F47;
+  /* Dark teal color */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.import-export-divider {
+  width: 150px;
+  height: 3px;
+  background-color: #a7d7d0;
+  /* Light teal color */
+  margin-bottom: 1.5rem;
+}
+
+.import-export-subtitle {
+  font-size: 1.5rem;
+  color: #144F47;
+  /* Dark teal color */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.import-export-description {
+  font-size: 1rem;
+  color: #144F47;
+  /* Dark teal color */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.import-export-description:last-child {
+  margin-bottom: 0;
+}
+
+/* IT Infrastructure Solutions Section */
+.it-infrastructure-section {
+  background-color: white;
+  padding: 0;
+}
+
+.it-infrastructure-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.it-infrastructure-content {
+  width: 50%;
+  padding: 4rem 3rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[dir="rtl"] .it-infrastructure-content {
+  padding: 4rem 2rem 4rem 3rem;
+}
+
+.it-infrastructure-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.it-infrastructure-description {
+  font-size: 1rem;
+  color: #144F47;
+  /* Dark teal color */
+  line-height: 1.6;
+}
+
+.it-infrastructure-image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.it-infrastructure-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hardware & Infrastructure Services Section */
+.hardware-services-section {
+  background-color: #f04927;
+  /* Orange/coral background */
+  padding: 4rem 0;
+  color: white;
+}
+
+.hardware-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hardware-services-content {
+  max-width: 800px;
+}
+
+.hardware-services-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: white;
+}
+
+.hardware-services-divider {
+  width: 150px;
+  height: 3px;
+  background-color: #ffffff;
+  /* White divider */
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.hardware-services-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hardware-services-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* Device Management Section */
+.device-management-section {
+  background-color: #e6dfd5;
+  padding: 0;
+}
+
+.device-management-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.device-management-image {
+  width: 50%;
+  background-color: #f04927;
+  /* Orange/coral background for image */
+  position: relative;
+  overflow: hidden;
+}
+
+.device-management-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.8;
+  /* Slightly transparent to match design */
+}
+
+.device-management-content {
+  width: 50%;
+  padding: 4rem 2rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #144F47;
+  /* Dark teal background */
+  color: white;
+}
+
+[dir="rtl"] .device-management-content {
+  padding: 4rem 3rem 4rem 2rem;
+}
+
+.device-management-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.device-management-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Cloud Hosting Section */
+.cloud-hosting-section {
+  background-color: #e6dfd5;
+  padding: 0;
+}
+
+.cloud-hosting-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cloud-hosting-content {
+  width: 50%;
+  padding: 4rem 3rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[dir="rtl"] .cloud-hosting-content {
+  padding: 4rem 2rem 4rem 3rem;
+}
+
+.cloud-hosting-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.cloud-hosting-description {
+  font-size: 1rem;
+  color: #144F47;
+  /* Dark teal color */
+  line-height: 1.6;
+}
+
+.cloud-hosting-image {
+  width: 42%;
+  background-color: #144F47;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+.cloud-hosting-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* IT Support Section */
+.it-support-section {
+  background-color: #e6dfd5;
+  padding: 0;
+}
+
+.it-support-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.it-support-image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.it-support-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.it-support-content {
+  width: 50%;
+  padding: 4rem 2rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #144F47;
+  /* Dark teal background */
+  color: white;
+}
+
+[dir="rtl"] .it-support-content {
+  padding: 4rem 3rem 4rem 2rem;
+}
+
+.it-support-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.it-support-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Data Center Solutions Section */
+.data-center-section {
+  background-color: #e6dfd5;
+  padding: 0;
+}
+
+.data-center-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.data-center-content {
+  width: 50%;
+  padding: 4rem 3rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[dir="rtl"] .data-center-content {
+  padding: 4rem 2rem 4rem 3rem;
+}
+
+.data-center-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.data-center-description {
+  font-size: 1rem;
+  color: #144F47;
+  /* Dark teal color */
+  line-height: 1.6;
+}
+
+.data-center-image {
+  width: 42%;
+  background-color: #144F47;
+  /* Dark teal background for image */
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+[dir="rtl"] .data-center-image {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.data-center-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Security and Safety Systems Section */
+.security-systems-section {
+  background-color: #e6dfd5;
+  padding: 0;
+}
+
+.security-systems-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.security-systems-image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.security-systems-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.security-systems-content {
+  width: 50%;
+  padding: 4rem 2rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #144F47;
+  /* Dark teal background */
+  color: white;
+}
+
+[dir="rtl"] .security-systems-content {
+  padding: 4rem 3rem 4rem 2rem;
+}
+
+.security-systems-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.security-systems-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Smart Learning Systems Section */
+.smart-learning-section {
+  background-color: #e6dfd5;
+  padding: 0;
+}
+
+.smart-learning-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.smart-learning-content {
+  width: 50%;
+  padding: 4rem 3rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[dir="rtl"] .smart-learning-content {
+  padding: 4rem 2rem 4rem 3rem;
+}
+
+.smart-learning-title {
+  font-size: 2rem;
+  color: #f04927;
+  /* Orange/coral color */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.smart-learning-description {
+  font-size: 1rem;
+  color: #144F47;
+  /* Dark teal color */
+  line-height: 1.6;
+}
+
+.smart-learning-image {
+  width: 42%;
+  background-color: #144F47;
+  /* Dark teal background for image */
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+[dir="rtl"] .smart-learning-image {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.smart-learning-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Managed Services Section */
+.managed-services-section {
+  background-color: #f04927;
+  /* Orange/coral background */
+  padding: 0;
+  margin-bottom: 4rem;
+}
+
+.managed-services-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.managed-services-image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.managed-services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.managed-services-content {
+  width: 50%;
+  padding: 4rem 2rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+[dir="rtl"] .managed-services-content {
+  padding: 4rem 3rem 4rem 2rem;
+}
+
+.managed-services-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: white;
+}
+
+.managed-services-divider {
+  width: 150px;
+  height: 3px;
+  background-color: #ffffff;
+  /* White divider */
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.managed-services-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.get-in-touch-btn {
+  background-color: #144F47;
+  /* Dark teal background */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+[dir="rtl"] .get-in-touch-btn {
+  align-self: flex-end;
+}
+
+.get-in-touch-btn:hover {
+  background-color: #083a31;
+  /* Darker teal on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+
+  .import-export-container,
+  .it-infrastructure-container,
+  .device-management-container,
+  .cloud-hosting-container,
+  .it-support-container,
+  .data-center-container,
+  .security-systems-container,
+  .smart-learning-container,
+  .managed-services-container {
+    flex-direction: column;
+  }
+
+  .import-export-image,
+  .import-export-content,
+  .it-infrastructure-image,
+  .it-infrastructure-content,
+  .device-management-image,
+  .device-management-content,
+  .cloud-hosting-image,
+  .cloud-hosting-content,
+  .it-support-image,
+  .it-support-content,
+  .data-center-image,
+  .data-center-content,
+  .security-systems-image,
+  .security-systems-content,
+  .smart-learning-image,
+  .smart-learning-content,
+  .managed-services-image,
+  .managed-services-content {
+    width: 100%;
+  }
+
+  .import-export-image,
+  .it-infrastructure-image,
+  .device-management-image,
+  .cloud-hosting-image,
+  .it-support-image,
+  .data-center-image,
+  .security-systems-image,
+  .smart-learning-image,
+  .managed-services-image {
+    height: 300px;
+    margin-left: 0;
+  }
+
+  [dir="rtl"] .import-export-image,
+  [dir="rtl"] .it-infrastructure-image,
+  [dir="rtl"] .device-management-image,
+  [dir="rtl"] .cloud-hosting-image,
+  [dir="rtl"] .it-support-image,
+  [dir="rtl"] .data-center-image,
+  [dir="rtl"] .security-systems-image,
+  [dir="rtl"] .smart-learning-image,
+  [dir="rtl"] .managed-services-image {
+    margin-right: 0;
+  }
+
+  .import-export-content,
+  .it-infrastructure-content,
+  .device-management-content,
+  .cloud-hosting-content,
+  .it-support-content,
+  .data-center-content,
+  .security-systems-content,
+  .smart-learning-content,
+  .managed-services-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2.5rem;
+  }
+
+  .import-export-title,
+  .hardware-services-title,
+  .it-infrastructure-title,
+  .device-management-title,
+  .cloud-hosting-title,
+  .it-support-title,
+  .data-center-title,
+  .security-systems-title,
+  .smart-learning-title,
+  .managed-services-title {
+    font-size: 1.8rem;
+  }
+
+  .import-export-subtitle,
+  .hardware-services-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hardware-services-content {
+    max-width: 100%;
+  }
+
+  /* Control the order of content and images on mobile */
+  .it-infrastructure-content,
+  .cloud-hosting-content,
+  .data-center-content {
+    order: 2;
+  }
+
+  .it-infrastructure-image,
+  .cloud-hosting-image,
+  .data-center-image {
+    order: 1;
+  }
+
+  .device-management-content,
+  .it-support-content {
+    order: 2;
+  }
+
+  .device-management-image,
+  .it-support-image {
+    order: 1;
+  }
+
+  /* RTL order should be reversed for proper visual flow */
+  [dir="rtl"] .it-infrastructure-content,
+  [dir="rtl"] .cloud-hosting-content,
+  [dir="rtl"] .data-center-content {
+    order: 1;
+  }
+
+  [dir="rtl"] .it-infrastructure-image,
+  [dir="rtl"] .cloud-hosting-image,
+  [dir="rtl"] .data-center-image {
+    order: 2;
+  }
+
+  [dir="rtl"] .device-management-content,
+  [dir="rtl"] .it-support-content {
+    order: 1;
+  }
+
+  [dir="rtl"] .device-management-image,
+  [dir="rtl"] .it-support-image {
+    order: 2;
+  }
+}

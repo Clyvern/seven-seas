@@ -1,0 +1,59 @@
+/* RTL Support Styles */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+/* Hero Section RTL */
+html[dir="rtl"] .heroContent {
+  text-align: center;
+}
+
+/* Services Section RTL */
+html[dir="rtl"] .serviceDivider {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .knowMoreBtn {
+  align-self: flex-end;
+}
+
+/* Features Section RTL */
+html[dir="rtl"] .featureNumber {
+  right: auto;
+  left: 1.5rem;
+}
+
+/* Contact Form RTL */
+html[dir="rtl"] .contactLeft {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+html[dir="rtl"] .formGroup {
+  text-align: right;
+}
+
+html[dir="rtl"] .socialSection {
+  text-align: right;
+}
+
+/* Responsive adjustments for RTL */
+@media (max-width: 768px) {
+  html[dir="rtl"] .contactLeft {
+    padding-left: 0;
+  }
+  
+  html[dir="rtl"] .contactTitle,
+  html[dir="rtl"] .contactSubtitle,
+  html[dir="rtl"] .socialSection {
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html[dir="rtl"] .contactLeft {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+}
