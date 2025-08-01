@@ -19,19 +19,18 @@ const Footer = () => {
         {/* Contact Info Section */}
         <div className='footer-info'>
           <div className='info-row'>
-            <a href='tel:+20000000000'>+20 000 000 000</a>
-            <a href='tel:+20000000000'>+20 000 000 000</a>
+            <a href='tel:+966550049222'>+966550049222</a>
           </div>
           <div className='info-row'>
             {/* The address can be a link to Google Maps */}
             <a
-              href='https://www.google.com/maps/search/?api=1&query=55+Zohor.st,+Dokki,+Giza,+Egypt'
+              href='https://maps.app.goo.gl/pdUnuEjYBpVZFfg28'
               target='_blank'
               rel='noopener noreferrer'
             >
-              55 Zohor.st, Dokki, Giza, egypt
+             7277 King Fahad Branch Road, Al Olaya Dist., 3333, Riyadh, 12212, KSA
             </a>
-            <a href='mailto:Info@clyvern.net'>Info@clyvern.net</a>
+            <a href='mailto:info@sevensseas.net'>info@sevensseas.net</a>
           </div>
         </div>
       </div>
