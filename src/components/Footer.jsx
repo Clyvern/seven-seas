@@ -19,8 +19,10 @@ const Footer = () => {
         {/* Contact Info Section */}
         <div className='footer-info'>
           <div className='info-row'>
-            <a href='tel:+966550049222'>+966550049222</a>
+             <a href='tel:+966550049222'>+966 55 004 9222</a>
           </div>
+          
+            <a href='mailto:info@sevensseas.net'>info@sevensseas.net</a>
           <div className='info-row'>
             {/* The address can be a link to Google Maps */}
             <a
@@ -30,7 +32,6 @@ const Footer = () => {
             >
              7277 King Fahad Branch Road, Al Olaya Dist., 3333, Riyadh, 12212, KSA
             </a>
-            <a href='mailto:info@sevensseas.net'>info@sevensseas.net</a>
           </div>
         </div>
       </div>
