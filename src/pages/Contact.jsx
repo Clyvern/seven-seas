@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/Contact.module.css';
-import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { useLanguage } from '../contexts/LanguageContext';
 import contactStyles from '../styles/Contact.module.css';
 
@@ -59,15 +60,12 @@ const Contact = () => {
 
   // Social media links configuration
   const socialLinks = [
-    { platform: 'linkedin', icon: <FaLinkedin />, url: 'https://linkedin.com' },
-    { platform: 'facebook', icon: <FaFacebook />, url: 'https://facebook.com' },
-    { platform: 'twitter', icon: <FaTwitter />, url: 'https://twitter.com' },
-    {
-      platform: 'instagram',
-      icon: <FaInstagram />,
-      url: 'https://instagram.com',
-    },
-  ];
+      { platform: 'instragram', icon: <FaInstagram />, url: 'https://www.instagram.com/seven_sseas?igsh=eGpvN2hvbmZpZ2Nu' },
+      { platform: 'facebook', icon: <FaFacebookF />, url: 'https://www.facebook.com/share/16mwRgv5BW/' },
+      { platform: 'twitter', icon: <FaXTwitter />, url: 'https://x.com/seven_sseas?t=QqEsBCIvVjT1sTDaY93eXg&s=08' },
+      { platform: 'linkedin', icon: <FaLinkedinIn />, url: '' },
+    ];
+  
 
   // Render form field based on type
   const renderFormField = (field) => {
@@ -128,26 +126,30 @@ const Contact = () => {
           {/* Input 1: Name */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='name'>{t('home.contact.name')}</label>
-            <input type='text' id='name' name='name' defaultValue='' />
+            <input type='text' id='name' name='name' required />
           </div>
 
           {/* Input 2: Email */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='email'>{t('home.contact.email')}</label>
-            <input type='email' id='email' name='email' defaultValue='' />
+            <input type='email' id='email' name='email' required />
           </div>
 
           {/* Input 3: Number */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='number'>{t('home.contact.phone')}</label>
-            <input type='tel' id='number' name='number' defaultValue='' />
+            <input type='tel' id='number' name='number' required/>
           </div>
 
           {/* Input 4: Message */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='message'>{t('home.contact.message')}</label>
-            <input type='text' id='message' name='message' defaultValue='' />
+            <input type='text' id='message' name='message' required />
           </div>
+
+            <button type='submit' className={contactStyles.contactForm__submitBtn}>
+          {t('home.contact.submit')}
+        </button>
         </form>
 
         <div className={contactStyles.contactForm__socialSection}>
@@ -171,9 +173,7 @@ const Contact = () => {
         </div>
 
         {/* The image doesn't show a button, but forms need one. I've styled it to fit the design. */}
-        <button type='submit' className={contactStyles.contactForm__submitBtn}>
-          {t('home.contact.submit')}
-        </button>
+      
       </div>
     </section>
   );

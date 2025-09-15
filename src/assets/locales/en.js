@@ -38,7 +38,7 @@ export default {
       itInfrastructure: {
         title: 'IMPORT AND EXPORT OF CUTTING-EDGE TECH',
         description:
-          'From smart devices and IoT solutions to enterprise-grade IT hardware, everything we move is handpicked to match our vision of the future. By handling our own imports and exports, we maintain full control over quality, speed, and strategy so every product we offer is a direct result of our global expertise and market foresight.',
+          'From smart devices and IoT solutions to enterprise-grade IT hardware, everything we move is handpicked to match our vision of the future, with full control over quality, speed, and strategy through in-house imports and exports',
       },
       managedServices: {
         title: 'MANAGED SERVICES',
@@ -81,13 +81,13 @@ export default {
       },
     },
     partners: {
-      title: 'OUR PARTNERS',
+      title: 'PARTNERS',
       description:
         'We collaborate with world-class technology providers, global distributors, and logistics experts to ensure our clients get the highest quality products, seamless delivery, and reliable support.',
       cta: 'Know More',
     },
     contact: {
-      title: 'GET IN TOUCH',
+      title: ' CONTACT US',
       subtitle: "Let's connect & bring the world to your doorstep.",
       name: 'Name',
       email: 'Email',
@@ -106,12 +106,12 @@ export default {
         'At Seven Seas, we navigate the world, and in doing so, we are constantly exposed to the latest technologies shaping global trade. The waves of the seven seas are our companions, guiding us forward, while the tides challenge us to innovate and bring new solutions to local markets. Our services include Import & Export, ensuring smooth and efficient cross-border transactions, Software Managed Services that optimize your operations with cutting-edge solutions, and Hardware Services designed to keep your infrastructure running at its peak.',
     },
     mission: {
-      title: 'MISSION',
+      title: 'MISSION :',
       description:
         'To bridge global markets with innovative technologies, offering seamless import and export services alongside tailored managed solutions. We empower businesses to grow smarter, move faster, and operate with confidence in an ever-evolving digital world.',
     },
     vision: {
-      title: 'VISION',
+      title: 'VISION :',
       description:
         'To become a leading global partner in tech-enabled trade, where innovation drives progress and every business has access to the tools, products, and support it needs to succeed, wherever it operates.',
     },
@@ -152,18 +152,29 @@ export default {
   services: {
     hero: {
       title: 'SERVICES',
-      subtitle: 'Comprehensive IT Solutions for Your Business',
+      subtitle: 'xx',
     },
     importExport: {
-      title: 'IMPORT AND EXPORT OF CUTTING-EDGE TECH',
+      title: 'IMPORT AND EXPORT OF',
+      title2: 'Cutting-Edge Tech:',
       subtitle: 'Global Tech Delivered Locally',
       description:
-        "At Seven Seas, we don't just keep up with technology, we bring it home. We specialize in sourcing, importing, and exporting advanced tech products through our own global network, ensuring we always have access to the latest innovations. From smart devices and IoT solutions to enterprise-grade IT hardware, everything we move is handpicked to match our vision of the future. By handling our own imports and exports, we maintain full control over quality, speed, and strategy so every product we offer is a direct result of our global expertise and market foresight.",
+        "At Seven Seas, we don't just keep up with technology, we bring it home. We specialize in sourcing, importing, and exporting advanced tech products through our own global network, ensuring we always have access to the latest innovations.",
+      description2:
+      "From smart devices and IoT solutions to enterprise-grade IT hardware, everything we move is handpicked to match our vision of the future. By handling our own imports and exports, we maintain full control over quality, speed, and strategy so every product we offer is a direct result of our global expertise and market foresight." 
+      
     },
     itInfrastructure: {
-      title: 'IT INFRASTRUCTURE SOLUTIONS',
+      title: 'Hardware & Infrastructure Services:',
+      description:
+        'At Seven Seas, we build the backbone that keeps your business running strong. Our hardware and infrastructure solutions are designed with precision to ensure performance, security, and long-term reliability.',
+      subtitle: 'Optimized Systems. Scalable Growth. Enterprise-Grade Reliability.',
+    },
+     itInfrasolution: {
+      title: 'IT Infrastructure Solutions',
       description:
         'We design and implement complete network environments, including structured cabling, LAN/WAN setups, and enterprise-grade routing and switching. Our trusted technology partners include Cisco, Aruba, and Ubiquiti.',
+      subtitle: 'Optimized Systems. Scalable Growth. Enterprise-Grade Reliability.',
     },
     deviceManagement: {
       title: 'DEVICE AND TECHNOLOGY MANAGEMENT',

@@ -11,8 +11,6 @@ const Footer = () => {
         <div className='footer-logo'>
           <img src={logo} alt='Seven Seas Graphic' className='logo-graphic' />
           <div className='logo-text'>
-            <span>SEVEN</span>
-            <span>SEAS</span>
           </div>
         </div>
 

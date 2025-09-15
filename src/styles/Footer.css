@@ -2,7 +2,7 @@
 
 /* Main footer styles */
 .footer {
-  background-color: #2A524E;
+  background-color: #144f47;
   /* Dark green/teal from the image */
   color: #FFFFFF;
   padding: 2rem 2.5rem;
@@ -30,13 +30,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-left: 5rem;
   /* Space between graphic and text */
 }
 
 .logo-graphic {
-  height: 60px;
+  height: 80%;
   /* Adjust size as needed */
-  width: auto;
+  width: 60%;
 }
 
 .logo-text {

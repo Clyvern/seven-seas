@@ -19,7 +19,7 @@ const Services = () => {
       <section className='services-header'>
         <div className='services-title-container'>
           <h1 className='services-title'>{t('services.hero.title')}</h1>
-          <p className='services-subtitle'>{t('services.hero.subtitle')}</p>
+         
         </div>
       </section>
 
@@ -32,10 +32,19 @@ const Services = () => {
             <h2 className='import-export-title'>
               {t('services.importExport.title')}
             </h2>
+            <h2 className='import-export-title'>
+              {t('services.importExport.title2')}
+            </h2>
             <div className='import-export-divider'></div>
-
+               <p className='import-export-subtitle'>
+                  {t('services.importExport.subtitle')}
+                </p>
             <p className='import-export-description'>
               {t('services.importExport.description')}
+            </p>
+              <br/>
+             <p className='import-export-description'>
+              {t('services.importExport.description2')}
             </p>
           </div>
         </div>
@@ -48,7 +57,9 @@ const Services = () => {
               {t('services.itInfrastructure.title')}
             </h2>
             <div className='hardware-services-divider'></div>
-
+            <p className='hardware-services-subtitle'>
+              {t('services.itInfrastructure.subtitle')}
+            </p>
             <p className='hardware-services-description'>
               {t('services.itInfrastructure.description')}
             </p>
@@ -56,14 +67,14 @@ const Services = () => {
         </div>
       </section>
 
-      <section className='it-infrastructure-section'>
+      <section className='it-infrastructure-section' >
         <div className='it-infrastructure-container'>
           <div className='it-infrastructure-content'>
             <h2 className='it-infrastructure-title'>
-              {t('services.itInfrastructure.title')}
+              {t('services.itInfrasolution.title')}
             </h2>
             <p className='it-infrastructure-description'>
-              {t('services.itInfrastructure.description')}
+              {t('services.itInfrasolution.description')}
             </p>
           </div>
           <div className='it-infrastructure-image'>
@@ -188,7 +199,7 @@ const Services = () => {
         </div>
       </section>
 
-      <Partners />
+      {/* <Partners /> */}
     </div>
   );
 };

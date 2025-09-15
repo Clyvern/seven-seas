@@ -187,6 +187,17 @@ const Header = () => {
               {t('nav.contact')}
             </NavLink>
           </li>
+            <li className='sidebar-nav-item'>
+            <NavLink
+              to='/partners'
+              className={({ isActive }) =>
+                isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
+              }
+              onClick={handleNavLinkClick}
+            >
+              {t('nav.partners')}
+            </NavLink>
+          </li>
         </ul>
         <div className='language-switcher-container-mobile'>
           <LanguageSwitcher />

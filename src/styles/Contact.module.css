@@ -4,7 +4,7 @@
   /* Orange/coral color */
   --secondary-color: #144F47;
   /* Dark teal color */
-  --background-color: #e6dfd5;
+
   /* Light beige background */
   --divider-color: #cce5e1;
   /* Light teal color for divider */
@@ -71,6 +71,8 @@
 /* Form Styles */
 .contactForm {
   text-align: left;
+  margin-bottom: 5%;
+  
 }
 
 :global([dir="rtl"]) .contactForm {
@@ -205,10 +207,12 @@ textarea.formInput {
 .contactForm {
   background-color: var(--background-color);
   /* Accurate cream background */
-  padding: 6rem 1.5rem;
+  padding: 3rem 1.5rem;
   font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: center;
+    min-height: 10vh;
+     margin-bottom: 0; 
 }
 
 /* Centered container for all content */
@@ -231,8 +235,8 @@ textarea.formInput {
 /* The teal rule under the title */
 .contactForm__rule {
   border: none;
-  height: 3px;
-  width: 100%;
+  height: 4px;
+  width: 70%;
   background-color: #9DC8C8;
   /* Accurate light teal */
   margin: 1rem auto 1.5rem;
@@ -303,12 +307,12 @@ textarea.formInput {
 
 /* "Stay in the loop." section */
 .contactForm__socialSection {
-  margin-bottom: 2.5rem;
+  margin-bottom: -3rem;
 }
 
 .contactForm__socialTitle {
   color: #144F47;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -317,6 +321,7 @@ textarea.formInput {
   display: flex;
   justify-content: center;
   gap: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .contactForm__socialIcon {
@@ -333,7 +338,13 @@ textarea.formInput {
   transition: transform 0.2s ease;
 }
 
+.contactForm__socialIcon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
 .contactForm__socialIcon:hover {
+  background-color: whitesmoke;
   transform: scale(1.1);
 }
 
