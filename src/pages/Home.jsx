@@ -24,7 +24,7 @@ const Home = () => {
       { platform: 'instragram', icon: <FaInstagram />, url: 'https://www.instagram.com/seven_sseas?igsh=eGpvN2hvbmZpZ2Nu' },
       { platform: 'facebook', icon: <FaFacebookF />, url: 'https://www.facebook.com/share/16mwRgv5BW/' },
       { platform: 'twitter', icon: <FaXTwitter />, url: 'https://x.com/seven_sseas?t=QqEsBCIvVjT1sTDaY93eXg&s=08' },
-      { platform: 'linkedin', icon: <FaLinkedinIn />, url: '' },
+      { platform: 'linkedin', icon: <FaLinkedinIn />, url: 'https://www.linkedin.com/company/sevensseas/' },
     ];
   
 

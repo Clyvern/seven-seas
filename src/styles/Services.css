@@ -5,7 +5,6 @@
 /* Services Header Section */
 .services-header {
   background-color: #e6dfd5;
-  /* Light beige background */
   padding: 3rem 0;
   text-align: center;
 }
@@ -19,7 +18,6 @@
 .services-title {
   font-size: 3.5rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
@@ -28,9 +26,7 @@
 /* Import Export Section */
 .import-export-section {
   background-color: #e6dfd5;
-  /* Light beige background */
   padding: 0 0 4rem 0;
-  
 }
 
 .import-export-container {
@@ -42,7 +38,6 @@
 .import-export-image {
   width: 50%;
   background-color: #144F47;
-  /* Dark teal background */
   position: relative;
   overflow: hidden;
 }
@@ -53,7 +48,6 @@
   object-fit: cover;
   display: block;
   opacity: 0.8;
-  /* Slightly transparent to match design */
 }
 
 .import-export-content {
@@ -62,7 +56,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -20%;
+  margin-top: -10%;
 }
 
 [dir="rtl"] .import-export-content {
@@ -72,7 +66,6 @@
 .import-export-title {
   font-size: 2rem;
   color: #144F47;
-  /* Dark teal color */
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -83,14 +76,12 @@
   width: 250px;
   height: 5px;
   background-color: #a7d7d0;
-  /* Light teal color */
   margin-bottom: 1.5rem;
 }
 
 .import-export-subtitle {
   font-size: 1.5rem;
   color: #144F47;
-  /* Dark teal color */
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -98,7 +89,6 @@
 .import-export-description {
   font-size: 1rem;
   color: #144F47;
-  /* Dark teal color */
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -134,7 +124,6 @@
 .it-infrastructure-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -144,7 +133,6 @@
 .it-infrastructure-description {
   font-size: 1rem;
   color: #144F47;
-  /* Dark teal color */
   line-height: 1.6;
 }
 
@@ -197,7 +185,7 @@
 }
 
 .hardware-services-subtitle {
- font-size: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: white;
@@ -210,16 +198,8 @@
   width: 150px;
   height: 3px;
   background-color: #ffffff;
-  /* White divider */
   margin-bottom: 1.5rem;
   opacity: 0.5;
-}
-
-.hardware-services-subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: white;
 }
 
 .hardware-services-description {
@@ -228,12 +208,14 @@
   margin-bottom: 1.5rem;
   color: white;
 }
+
 [dir="rtl"] .hardware-services-section {
   left: auto;
   right: 50%;
   margin-left: 0;
   margin-right: -50vw;
 }
+
 /* Device Management Section */
 .device-management-section {
   background-color: #e6dfd5;
@@ -249,7 +231,6 @@
 .device-management-image {
   width: 50%;
   background-color: #f04927;
-  /* Orange/coral background for image */
   position: relative;
   overflow: hidden;
 }
@@ -260,7 +241,6 @@
   object-fit: cover;
   display: block;
   opacity: 0.8;
-  /* Slightly transparent to match design */
 }
 
 .device-management-content {
@@ -270,7 +250,6 @@
   flex-direction: column;
   justify-content: center;
   background-color: #144F47;
-  /* Dark teal background */
   color: white;
 }
 
@@ -281,7 +260,6 @@
 .device-management-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -321,7 +299,6 @@
 .cloud-hosting-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -331,7 +308,6 @@
 .cloud-hosting-description {
   font-size: 1rem;
   color: #144F47;
-  /* Dark teal color */
   line-height: 1.6;
 }
 
@@ -382,7 +358,6 @@
   flex-direction: column;
   justify-content: center;
   background-color: #144F47;
-  /* Dark teal background */
   color: white;
 }
 
@@ -393,7 +368,6 @@
 .it-support-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -433,7 +407,6 @@
 .data-center-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -443,14 +416,12 @@
 .data-center-description {
   font-size: 1rem;
   color: #144F47;
-  /* Dark teal color */
   line-height: 1.6;
 }
 
 .data-center-image {
   width: 42%;
   background-color: #144F47;
-  /* Dark teal background for image */
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -500,7 +471,6 @@
   flex-direction: column;
   justify-content: center;
   background-color: #144F47;
-  /* Dark teal background */
   color: white;
 }
 
@@ -511,7 +481,6 @@
 .security-systems-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -551,7 +520,6 @@
 .smart-learning-title {
   font-size: 2rem;
   color: #f04927;
-  /* Orange/coral color */
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -561,14 +529,12 @@
 .smart-learning-description {
   font-size: 1rem;
   color: #144F47;
-  /* Dark teal color */
   line-height: 1.6;
 }
 
 .smart-learning-image {
   width: 42%;
   background-color: #144F47;
-  /* Dark teal background for image */
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -589,8 +555,7 @@
 /* Managed Services Section */
 .managed-services-section {
   background-color: #f04927;
-  /* Orange/coral background */
- padding-bottom: -10rem; /* Increase as needed */
+  padding-bottom: -10rem;
   margin-bottom: 0;
 }
 
@@ -608,9 +573,9 @@
 
 .managed-services-image img {
   width: 170%;
-  height: 350px;           /* Increase height for zoom effect */
+  height: 350px;
   object-fit: cover;
-  object-position: center 25%; /* Move image down, adjust % as needed */
+  object-position: center 25%;
   display: block;
   margin-top: 30px;
 }
@@ -641,7 +606,6 @@
   width: 150px;
   height: 3px;
   background-color: #ffffff;
-  /* White divider */
   margin-bottom: 1.5rem;
   opacity: 0.5;
 }
@@ -655,7 +619,6 @@
 
 .get-in-touch-btn {
   background-color: #144F47;
-  /* Dark teal background */
   color: white;
   border: none;
   border-radius: 25px;
@@ -674,12 +637,18 @@
 
 .get-in-touch-btn:hover {
   background-color: #083a31;
-  /* Darker teal on hover */
 }
 
 /* Responsive Styles */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  .services-title-container,
+  .hardware-services-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
 
+@media (max-width: 992px) {
   .import-export-container,
   .it-infrastructure-container,
   .device-management-container,
@@ -690,28 +659,31 @@
   .smart-learning-container,
   .managed-services-container {
     flex-direction: column;
+    max-width: 100%;
+    padding: 0;
   }
 
   .import-export-image,
-  .import-export-content,
-  .hardware-services-section,
   .it-infrastructure-image,
-  .it-infrastructure-content,
   .device-management-image,
-  .device-management-content,
   .cloud-hosting-image,
-  .cloud-hosting-content,
   .it-support-image,
-  .it-support-content,
   .data-center-image,
-  .data-center-content,
   .security-systems-image,
-  .security-systems-content,
   .smart-learning-image,
-  .smart-learning-content,
   .managed-services-image,
+  .import-export-content,
+  .it-infrastructure-content,
+  .device-management-content,
+  .cloud-hosting-content,
+  .it-support-content,
+  .data-center-content,
+  .security-systems-content,
+  .smart-learning-content,
   .managed-services-content {
     width: 100%;
+    padding: 1rem;
+    min-height: unset;
   }
 
   .import-export-image,
@@ -725,18 +697,6 @@
   .managed-services-image {
     height: 300px;
     margin-left: 0;
-  }
-  [dir="rtl"] .hardware-services-section,
-  [dir="rtl"] .import-export-image,
-  [dir="rtl"] .it-infrastructure-image,
-  [dir="rtl"] .device-management-image,
-  [dir="rtl"] .cloud-hosting-image,
-  [dir="rtl"] .it-support-image,
-  [dir="rtl"] .data-center-image,
-  [dir="rtl"] .security-systems-image,
-  [dir="rtl"] .smart-learning-image,
-  [dir="rtl"] .managed-services-image {
-    margin-right: 0;
   }
 
   .import-export-content,
@@ -754,7 +714,8 @@
 
 @media (max-width: 768px) {
   .services-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding: 0 0.5rem;
   }
 
   .import-export-title,
@@ -767,16 +728,25 @@
   .security-systems-title,
   .smart-learning-title,
   .managed-services-title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .import-export-subtitle,
   .hardware-services-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .hardware-services-content {
     max-width: 100%;
+    padding: 1rem;
+  }
+
+  .get-in-touch-btn {
+    width: 100%;
+    text-align: center;
+    align-self: center;
   }
 
   /* Control the order of content and images on mobile */
@@ -802,7 +772,6 @@
     order: 1;
   }
 
-  /* RTL order should be reversed for proper visual flow */
   [dir="rtl"] .it-infrastructure-content,
   [dir="rtl"] .cloud-hosting-content,
   [dir="rtl"] .data-center-content {
@@ -824,4 +793,66 @@
   [dir="rtl"] .it-support-image {
     order: 2;
   }
+}
+
+@media (max-width: 576px) {
+  .services-header {
+    padding: 1.5rem 0;
+  }
+  .services-title {
+    font-size: 1.2rem;
+  }
+  .import-export-content,
+  .it-infrastructure-content,
+  .device-management-content,
+  .cloud-hosting-content,
+  .it-support-content,
+  .data-center-content,
+  .security-systems-content,
+  .smart-learning-content,
+  .managed-services-content {
+    padding: 0.5rem;
+  }
+  .hardware-services-section {
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+  .hardware-services-content {
+    padding: 0.5rem;
+  }
+  .get-in-touch-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Make all images responsive */
+.import-export-image img,
+.it-infrastructure-image img,
+.device-management-image img,
+.cloud-hosting-image img,
+.it-support-image img,
+.data-center-image img,
+.security-systems-image img,
+.smart-learning-image img,
+.managed-services-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ensure text wraps and doesn't overflow */
+.import-export-title,
+.hardware-services-title,
+.it-infrastructure-title,
+.device-management-title,
+.cloud-hosting-title,
+.it-support-title,
+.data-center-title,
+.security-systems-title,
+.smart-learning-title,
+.managed-services-title {
+  word-break: break-word;
+  hyphens: auto;
 }

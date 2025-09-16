@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import styles from '../styles/Contact.module.css';
-import { FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import contactStyles from '../styles/Contact.module.css';
+import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { useLanguage } from '../contexts/LanguageContext';
-import contactStyles from '../styles/Contact.module.css';
 
 const Contact = () => {
-  const { t, isRTL } = useLanguage();
-  // Initial form data with example values as shown in the screenshot
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,33 +13,11 @@ const Contact = () => {
     message: '',
   });
 
-  // Form field configuration for cleaner rendering
-  const formFields = [
-    { id: 'name', label: t('contact.form.name'), type: 'text', required: true },
-    {
-      id: 'email',
-      label: t('contact.form.email'),
-      type: 'email',
-      required: true,
-    },
-    {
-      id: 'number',
-      label: t('contact.form.number'),
-      type: 'tel',
-      required: false,
-    },
-    {
-      id: 'message',
-      label: t('contact.form.message'),
-      type: 'textarea',
-      required: true,
-    },
-    {
-      id: 'submit',
-      label: t('contact.form.submit'),
-      type: 'submit',
-      required: true,
-    },
+  const socialLinks = [
+    { platform: 'instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/seven_sseas?igsh=eGpvN2hvbmZpZ2Nu' },
+    { platform: 'facebook', icon: <FaFacebookF />, url: 'https://www.facebook.com/share/16mwRgv5BW/' },
+    { platform: 'twitter', icon: <FaXTwitter />, url: 'https://x.com/seven_sseas?t=QqEsBCIvVjT1sTDaY93eXg&s=08' },
+    { platform: 'linkedin', icon: <FaLinkedinIn />, url: 'https://www.linkedin.com/company/sevensseas/' },
   ];
 
   const handleChange = (e) => {
@@ -54,62 +30,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     alert(t('contact.form.successMessage'));
-  };
-
-  // Social media links configuration
-  const socialLinks = [
-      { platform: 'instragram', icon: <FaInstagram />, url: 'https://www.instagram.com/seven_sseas?igsh=eGpvN2hvbmZpZ2Nu' },
-      { platform: 'facebook', icon: <FaFacebookF />, url: 'https://www.facebook.com/share/16mwRgv5BW/' },
-      { platform: 'twitter', icon: <FaXTwitter />, url: 'https://x.com/seven_sseas?t=QqEsBCIvVjT1sTDaY93eXg&s=08' },
-      { platform: 'linkedin', icon: <FaLinkedinIn />, url: '' },
-    ];
-  
-
-  // Render form field based on type
-  const renderFormField = (field) => {
-    const { id, label, type, required } = field;
-
-    return (
-      <div className={styles.formGroup} key={id}>
-        {type !== 'submit' ? (
-          <label htmlFor={id}>{label}</label>
-        ) : (
-          <label htmlFor={id}></label>
-        )}
-        {type === 'textarea' ? (
-          <textarea
-            id={id}
-            name={id}
-            value={formData[id]}
-            onChange={handleChange}
-            placeholder={t(`contact.form.${id}`)}
-            required={required}
-            className={styles.formInput}
-          />
-        ) : type === 'submit' ? (
-          <button type='submit' className={styles.submitBtn}>
-            {t('contact.form.button')}
-          </button>
-        ) : (
-          <input
-            type={type}
-            id={id}
-            name={id}
-            value={formData[id]}
-            onChange={handleChange}
-            placeholder={t(`contact.form.${id}`)}
-            required={required}
-            className={styles.formInput}
-          />
-        )}
-      </div>
-    );
+    setFormData({
+      name: '',
+      email: '',
+      number: '',
+      message: '',
+    });
   };
 
   return (
-    <section style={{ height: '83.6vh' }} className={contactStyles.contactForm}>
+    <section className={contactStyles.contactForm}>
       <div className={contactStyles.contactForm__container}>
         <h2 className={contactStyles.contactForm__title}>
           {t('home.contact.title')}
@@ -123,33 +54,50 @@ const Contact = () => {
           className={contactStyles.contactForm__form}
           onSubmit={handleSubmit}
         >
-          {/* Input 1: Name */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='name'>{t('home.contact.name')}</label>
-            <input type='text' id='name' name='name' required />
+            <input
+              type='text'
+              id='name'
+              name='name'
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </div>
 
-          {/* Input 2: Email */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='email'>{t('home.contact.email')}</label>
-            <input type='email' id='email' name='email' required />
+            <input
+              type='email'
+              id='email'
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
 
-          {/* Input 3: Number */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='number'>{t('home.contact.phone')}</label>
-            <input type='tel' id='number' name='number' required/>
+            <input
+              type='tel'
+              id='number'
+              name='number'
+              value={formData.number}
+              onChange={handleChange}
+              required
+            />
           </div>
 
-          {/* Input 4: Message */}
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='message'>{t('home.contact.message')}</label>
             <input type='text' id='message' name='message' required />
           </div>
 
-            <button type='submit' className={contactStyles.contactForm__submitBtn}>
-          {t('home.contact.submit')}
-        </button>
+          <button type='submit' className={contactStyles.contactForm__submitBtn}>
+            {t('home.contact.submit')}
+          </button>
         </form>
 
         <div className={contactStyles.contactForm__socialSection}>
@@ -171,9 +119,6 @@ const Contact = () => {
             ))}
           </div>
         </div>
-
-        {/* The image doesn't show a button, but forms need one. I've styled it to fit the design. */}
-      
       </div>
     </section>
   );
