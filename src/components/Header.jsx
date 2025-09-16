@@ -187,7 +187,7 @@ const Header = () => {
               {t('nav.contact')}
             </NavLink>
           </li>
-            <li className='sidebar-nav-item'>
+            {/* <li className='sidebar-nav-item'>
             <NavLink
               to='/partners'
               className={({ isActive }) =>
@@ -197,7 +197,7 @@ const Header = () => {
             >
               {t('nav.partners')}
             </NavLink>
-          </li>
+          </li> */}
         </ul>
         <div className='language-switcher-container-mobile'>
           <LanguageSwitcher />
