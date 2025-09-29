@@ -12,6 +12,9 @@ const Contact = () => {
     number: '',
     message: '',
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   const socialLinks = [
     { platform: 'instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/seven_sseas?igsh=eGpvN2hvbmZpZ2Nu' },
@@ -28,15 +31,39 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(t('contact.form.successMessage'));
-    setFormData({
-      name: '',
-      email: '',
-      number: '',
-      message: '',
-    });
+    setLoading(true);
+    setError('');
+    setSuccess('');
+
+    try {
+      const response = await fetch('https://nodejs-email-repo.vercel.app/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSuccess(t('contact.form.successMessage'));
+        setFormData({
+          name: '',
+          email: '',
+          number: '',
+          message: '',
+        });
+      } else {
+        setError(result.message || t('contact.form.errorMessage'));
+      }
+    } catch (err) {
+      console.error(err);
+      setError(t('contact.form.errorMessage'));
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -92,11 +119,19 @@ const Contact = () => {
 
           <div className={contactStyles.contactForm__formGroup}>
             <label htmlFor='message'>{t('home.contact.message')}</label>
-            <input type='text' id='message' name='message' required />
+            <input
+              type='text'
+              id='message'
+              name='message'
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
           </div>
-
-          <button type='submit' className={contactStyles.contactForm__submitBtn}>
-            {t('home.contact.submit')}
+          {success && <div className={contactStyles.success}>{success}</div>}
+          {error && <div className={contactStyles.error}>{error}</div>}
+          <button type='submit' className={contactStyles.contactForm__submitBtn} disabled={loading}>
+            {loading ? t('contact.form.sending') : t('home.contact.submit')}
           </button>
         </form>
 

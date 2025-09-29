@@ -1,3 +1,4 @@
+
 export default {
   // Header
   nav: {
@@ -248,6 +249,7 @@ export default {
       button: 'Send Message',
       successMessage:
         'Thank you for your message. We will get back to you soon!',
+      sending: 'Sending...',  
     },
     info: {
       title: 'CONTACT INFORMATION',
