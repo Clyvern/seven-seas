@@ -5,24 +5,26 @@ import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import '../styles/Header.css';
 
+
 const Header = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
-  const closeSidebar = () => {
-    setSidebarOpen(false);
-  };
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
 
   const handleNavLinkClick = () => {
-    if (sidebarOpen) {
-      closeSidebar();
-    }
+    if (sidebarOpen) closeSidebar();
   };
+
+  // Define menu items
+  const menuItems = [
+    { path: '/', label: t('nav.home'), end: true },
+    { path: '/about', label: t('nav.about') },
+    { path: '/services', label: t('nav.services') },
+    { path: '/contact', label: t('nav.contact') },
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -60,146 +62,78 @@ const Header = () => {
 
   return (
     <>
-      <header className='header'>
-        <div className='container'>
-          <div className='logo-container'>
-            {/* The logo link can remain a NavLink or simple Link */}
-            <NavLink to='/' onClick={handleNavLinkClick}>
-              <img src={logo} alt='Seven Seas Logo' className='logo' />
+      <header className="header" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+        <div className="container">
+          <div className="logo-container">
+            <NavLink to="/" onClick={handleNavLinkClick}>
+              <img src={logo} alt="Seven Seas Logo" className="logo" />
             </NavLink>
           </div>
 
-          <nav className='nav-desktop'>
-            <ul className='nav-list-desktop'>
-              <li className='nav-item-desktop'>
-                {/* 2. USE NavLink and its className function prop */}
-                <NavLink
-                  to='/'
-                  // The 'end' prop ensures this link is only active on the exact path "/"
-                  end
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link-desktop active' : 'nav-link-desktop'
-                  }
-                  onClick={handleNavLinkClick}
-                >
-                  {t('nav.home')}
-                </NavLink>
-              </li>
-              <li className='nav-item-desktop'>
-                <NavLink
-                  to='/about'
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link-desktop active' : 'nav-link-desktop'
-                  }
-                  onClick={handleNavLinkClick}
-                >
-                  {t('nav.about')}
-                </NavLink>
-              </li>
-              <li className='nav-item-desktop'>
-                <NavLink
-                  to='/services'
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link-desktop active' : 'nav-link-desktop'
-                  }
-                  onClick={handleNavLinkClick}
-                >
-                  {t('nav.services')}
-                </NavLink>
-              </li>
-              <li className='nav-item-desktop'>
-                <NavLink
-                  to='/contact'
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link-desktop active' : 'nav-link-desktop'
-                  }
-                  onClick={handleNavLinkClick}
-                >
-                  {t('nav.contact')}
-                </NavLink>
-              </li>
+          {/* Desktop Navigation */}
+          <nav className="nav-desktop">
+            <ul className="nav-list-desktop">
+              {menuItems.map((item) => (
+                <li key={item.path} className="nav-item-desktop">
+                  <NavLink
+                    to={item.path}
+                    end={item.end || false}
+                    className={({ isActive }) =>
+                      isActive ? 'nav-link-desktop active' : 'nav-link-desktop'
+                    }
+                    onClick={handleNavLinkClick}
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </nav>
 
+          {/* Hamburger */}
           <button
             className={`hamburger-menu ${sidebarOpen ? 'active' : ''}`}
             onClick={toggleSidebar}
-            aria-label='Toggle menu'
+            aria-label="Toggle menu"
             aria-expanded={sidebarOpen}
           >
-            <span className='hamburger-box'>
-              <span className='hamburger-inner'></span>
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
             </span>
           </button>
 
-          <div className='language-switcher-container-desktop'>
+          {/* Language Switcher */}
+          <div className="language-switcher-container-desktop">
             <LanguageSwitcher />
           </div>
         </div>
       </header>
 
-      {sidebarOpen && <div className='overlay' onClick={closeSidebar}></div>}
+      {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
 
-      <nav ref={sidebarRef} className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-        <ul className='sidebar-nav-list'>
-          <li className='sidebar-nav-item'>
-            <NavLink
-              to='/'
-              end // 'end' prop is important here too
-              className={({ isActive }) =>
-                isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
-              }
-              onClick={handleNavLinkClick}
-            >
-              {t('nav.home')}
-            </NavLink>
-          </li>
-          <li className='sidebar-nav-item'>
-            <NavLink
-              to='/about'
-              className={({ isActive }) =>
-                isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
-              }
-              onClick={handleNavLinkClick}
-            >
-              {t('nav.about')}
-            </NavLink>
-          </li>
-          <li className='sidebar-nav-item'>
-            <NavLink
-              to='/services'
-              className={({ isActive }) =>
-                isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
-              }
-              onClick={handleNavLinkClick}
-            >
-              {t('nav.services')}
-            </NavLink>
-          </li>
-          <li className='sidebar-nav-item'>
-            <NavLink
-              to='/contact'
-              className={({ isActive }) =>
-                isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
-              }
-              onClick={handleNavLinkClick}
-            >
-              {t('nav.contact')}
-            </NavLink>
-          </li>
-            {/* <li className='sidebar-nav-item'>
-            <NavLink
-              to='/partners'
-              className={({ isActive }) =>
-                isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
-              }
-              onClick={handleNavLinkClick}
-            >
-              {t('nav.partners')}
-            </NavLink>
-          </li> */}
+      {/* Sidebar */}
+      <nav
+        ref={sidebarRef}
+        className={`sidebar ${sidebarOpen ? 'open' : ''}`}
+        dir={lang === 'ar' ? 'rtl' : 'ltr'}
+      >
+        <ul className="sidebar-nav-list">
+          {menuItems.map((item) => (
+            <li key={item.path} className="sidebar-nav-item">
+              <NavLink
+                to={item.path}
+                end={item.end || false}
+                className={({ isActive }) =>
+                  isActive ? 'sidebar-nav-link active' : 'sidebar-nav-link'
+                }
+                onClick={handleNavLinkClick}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
-        <div className='language-switcher-container-mobile'>
+        <div className="language-switcher-container-mobile">
           <LanguageSwitcher />
         </div>
       </nav>

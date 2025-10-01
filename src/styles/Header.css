@@ -1,7 +1,6 @@
 .header {
   background-color: #144f47;
   padding: 0;
-  direction: ltr;
   height: 80px;
   position: fixed;
   top: 0;
@@ -49,6 +48,14 @@
   margin: 0;
   padding: 0;
   align-items: center;
+}
+
+[dir="rtl"] .nav-list-desktop {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .sidebar-nav-list {
+  flex-direction: column-reverse;
 }
 
 .nav-item-desktop {
