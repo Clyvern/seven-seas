@@ -17,7 +17,11 @@ const Footer = () => {
         {/* Contact Info Section */}
         <div className='footer-info'>
           <div className='info-row'>
-             <a href='tel:+966550049222'>+966 55 004 9222</a>
+            <a href="tel:+966550049222">
+                <span style={{ direction: 'ltr', unicodeBidi: 'embed', display: 'inline-block' }}>
+                  +966 55 004 9222
+                </span>
+              </a>
           </div>
           
             <a href='mailto:info@sevensseas.net'>info@sevensseas.net</a>
