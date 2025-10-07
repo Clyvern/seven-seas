@@ -17,7 +17,7 @@ import featureShipping from '/src/assets/images/feature-shipping.webp';
 import featureGrowth from '/src/assets/images/feature-growth.webp';
 
 const Home = () => {
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -80,7 +80,10 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.homePage}>
+     <div
+      className={`${styles.homePage} ${isRTL ? styles.rtl : ''}`}
+      dir={isRTL ? 'rtl' : 'ltr'}
+    >
       <section className={styles.heroSection}>
         <div className={styles.container}>
           <div className={styles.heroContent}>
@@ -97,7 +100,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.servicesSection}>
+      <section className={styles.servicesSection} dir='ltr'>
         <h2 className={styles.sectionTitle}>{t('home.services.title')}</h2>
         <div className={styles.container}>
           <div className={styles.servicesGrid}>
@@ -149,7 +152,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.whyChooseSection}>
+      <section className={styles.whyChooseSection} dir='ltr'>
         <h2 className={styles.sectionTitle}>{t('home.features.title')}</h2>
 
         <div className={styles.container}>
@@ -216,7 +219,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.partnersSection}>
+      <section className={styles.partnersSection} dir='ltr'>
         <div className={styles.partnersContainer}>
           <div className={styles.partnersContent}>
             <h2 className={styles.partnersTitle}>{t('home.partners.title')}</h2>
@@ -233,8 +236,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={contactStyles.contactForm}>
-        <div className={contactStyles.contactForm__container}>
+      <section 
+        className={`${contactStyles.contactForm} ${isRTL ? contactStyles.rtl : ''}`}
+        >
+          <div
+          className={`${contactStyles.contactForm__container} ${
+            isRTL ? contactStyles.rtl : ''
+          }`}
+        >
           <h2 className={contactStyles.contactForm__title}>
             {t('home.contact.title')}
           </h2>
@@ -295,12 +304,15 @@ const Home = () => {
           </div>
           {success && <div className={contactStyles.success}>{success}</div>}
           {error && <div className={contactStyles.error}>{error}</div>}
-          <button type='submit' className={contactStyles.contactForm__submitBtn} disabled={loading}>
+          <button 
+           type='submit'
+           className={contactStyles.contactForm__submitBtn} 
+           disabled={loading}>
             {loading ? t('contact.form.sending') : t('home.contact.submit')}
           </button>
         </form>
          
-          <div className={contactStyles.contactForm__socialSection}>
+          <div className={contactStyles.contactForm__socialSection}  dir='ltr'>
             <h3 className={contactStyles.contactForm__socialTitle}>
               {t('home.contact.social')}
             </h3>

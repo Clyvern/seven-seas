@@ -5,7 +5,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t  , isRTL} = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -67,8 +67,14 @@ const Contact = () => {
   };
 
   return (
-    <section className={contactStyles.contactForm}>
-      <div className={contactStyles.contactForm__container}>
+   <section 
+           className={`${contactStyles.contactForm} ${isRTL ? contactStyles.rtl : ''}`}
+           >
+             <div
+             className={`${contactStyles.contactForm__container} ${
+               isRTL ? contactStyles.rtl : ''
+             }`}
+           >
         <h2 className={contactStyles.contactForm__title}>
           {t('home.contact.title')}
         </h2>
@@ -135,7 +141,7 @@ const Contact = () => {
           </button>
         </form>
 
-        <div className={contactStyles.contactForm__socialSection}>
+        <div className={contactStyles.contactForm__socialSection} dir='ltr'>
           <h3 className={contactStyles.contactForm__socialTitle}>
             {t('home.contact.social')}
           </h3>

@@ -350,6 +350,8 @@ textarea.formInput {
 
 /* Submit button, styled to match the theme */
 .contactForm__submitBtn {
+  display: block;               /* ensures margin auto works */
+  margin: 0 auto;               /* center horizontally */
   background-color: #f04927;
   color: white;
   border: none;
@@ -359,9 +361,81 @@ textarea.formInput {
   font-weight: 700;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 100%;                  /* take full container width */
+  max-width: 500px;             /* desktop max width */
+  text-align: center;           /* center text */
+
 }
 
 .contactForm__submitBtn:hover {
   background-color: #f04927;
   transform: scale(1.05);
+}
+
+/* RTL / Arabic contact section */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .contactForm__title,
+.rtl .contactForm__subtitle,
+.rtl label,
+.rtl p {
+  text-align: center;
+}
+
+.rtl .contactForm__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rtl .contactForm__formGroup {
+  width: 100%;
+  max-width: 500px;
+   justify-content: flex-start;
+}
+
+
+.rtl .contactForm__formGroup label {
+  margin-left: 1rem;  /* space between label and input */
+  margin-right: 0;     /* remove right margin */
+  text-align: right;   /* align text properly */
+}
+
+.rtl .contactForm__formGroup input {
+  text-align: right;   /* input text aligns with RTL */
+}
+
+.rtl .contactForm__socialIcons {
+  justify-content: center;
+}
+
+.rtl .contactForm__socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rtl .contactForm__submitBtn {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .contactForm__submitBtn {
+    max-width: 400px;
+      margin: 0 auto;   
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .contactForm__submitBtn {
+    max-width: 100%;  /* fill container on small screens */
+    padding: 1rem 1.5rem;
+     margin: 0 auto;
+  }
 }

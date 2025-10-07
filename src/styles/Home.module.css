@@ -820,4 +820,35 @@
   }
 }
 
-/* ...existing code... */
+/* RTL / Arabic support */
+.rtl {
+  direction: rtl;
+}
+
+.centerArabic {
+  text-align: center;
+  direction: rtl;
+}
+
+.rtl .heroTitle,
+.rtl .heroSubtitle,
+.rtl .sectionTitle,
+.rtl .serviceContent,
+.rtl .featureContent,
+.rtl .partnersContent {
+  text-align: center;
+}
+
+/* Flip feature numbers to left in RTL */
+.rtl .featureNumber {
+  right: auto;
+  left: 1.5rem;
+}
+
+/* Center service dividers */
+.rtl .serviceDivider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
